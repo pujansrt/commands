@@ -28,7 +28,26 @@ curl -X POST -H "Accept:application/json" -H "Content-Type: application/json" -d
 curl -H "Content-Type: application/json" -X PUT -d '{"name":"Pujan S.","gender":"M"}' http://host/api/
 
 curl --head --compressed quora.com
+```
 
+## Jar Commands
+
+```sh
+# Diff two jars
+pkgdiff ~/EAFCore.jar workspace_ERP/LibsProj/EAFCore.jar
+
+# Find text inside jar
+zipgrep "setAuthType" some.jar
+for file in *.jar; do unzip -c "$file" | grep "1.1-SNAP"; done
+
+# Directory to jar
+jar cvf hackapp.jar -C classes .
+
+# Extract war/jar
+unzip package.war -d mydir
+
+# View jar
+jar tvf MavenwebappwithTomcat-1.war
 ```
 
 ## Most Used Commands
