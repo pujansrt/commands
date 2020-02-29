@@ -1,6 +1,20 @@
 # Commands
 Productivity Commands List for macOS Software Development
 
+## Mis Commands
+
+```sh
+pgrep -i plex
+aws sts assume-role --profile xyz
+
+dig my.net
+dig my.net @8.8.8.8
+dig my.net +trace
+dig my.net NS
+
+history | grep -v "cd\|ls\|vi\|sudo\|cat\|open\|touch\|cp\|mv\|git\|rm\|npm\|ack\|pwd\|node\|code\|mkdir\|tsc"
+```
+
 ## Convert Commands
 
 ```sh
