@@ -164,6 +164,53 @@ npkill      # Search subdirectory for deletes selected node_modules directory
 tldr        # tldr;
 ```
 
+## Brew Favorites
+
+```sh
+ack
+apr
+aws-shell
+awscli
+bash
+bash-completion
+brotli
+composer
+dep
+docker
+gettext
+git
+git-flow-avh
+gmp
+gnu-getopt
+go
+graphviz
+httpd
+hugo
+ical-buddy
+icu4c
+ilmbase
+imagemagick
+jq
+maven
+mcrypt
+nmap
+node
+openssl
+pv
+telnet
+terminal-notifier
+tidy-html5
+tldr
+tree
+unixodbc
+vim
+webp
+wget
+x265
+xz
+yarn
+```
+
 ## Personal Bash Commands
 
 ```sh
