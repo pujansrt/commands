@@ -1,9 +1,59 @@
 # Commands
 Productivity Commands List for macOS Software Development
 
+## macOS Specific
+
+App is damaged and can't be opened. You should move it to the trash.
+
+```sh
+sudo xattr -rd com.apple.quarantine /Applications/Some.app
+```
+
+Launch Boot Utility OR Reinstall MAC etc
+
+```sh
+CMD + R > Press POWER Buttun
+```
+
+When BOOTing you see cross sign -> press CMD+R+ POWER button > Repair disk will solve problem
+
+
+### Enable at command
+
+```sh
+launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+```
+
+killall -KILL SystemUIServer
+
+## Db
+
+Export to Single csv file
+```sql
+@set maxrows 10000000;
+@export on;
+@export set filename="/Users/pujan/workspace_RSC/ps-smartfeed-timezone-service/manual-update/query_result.csv" CsvIncludeColumnHeader=false CsvColumnDelimiter=",";
+
+SELECT
+    * 
+FROM
+    TABLE
+WHERE
+    CONDITIONS
+;
+
+@export off;
+```
+![Exporting Query Results](http://confluence.dbvis.com/display/UG100/Exporting+Query+Results)
+
+
 ## Mis Commands
 
 ```sh
+tldr split # Too Long dont read
+
+date +'%Y-%m-%d %H:%M:%S.%s'
+
 pgrep -i plex
 aws sts assume-role --profile xyz
 
@@ -66,23 +116,22 @@ jar tvf MavenwebappwithTomcat-1.war
 
 ## Most Used Commands
 ```sh
+split -l 5000 query.sql file_part_
 
 history | tr -s ' ' | cut -d ' ' -f3 | sort | uniq -c | sort -n | tail | perl -lane 'print $F[1], "\t", $F[0], " ", "▄" x ($F[0] / 12)'
 
-mvn	219 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-cp	241 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-rm	314 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-vi	360 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-git	367 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-cat	379 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-npm	566 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-ls	687 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-ack	1405 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-cd	1487 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+mvn	219     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+cp	241     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+rm	314     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+vi	360     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+git	367     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+cat	379     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+npm	566     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+ls	687     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+ack	1405    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+cd	1487    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 ack # most used command for finding files use -i for ignore case in PWD
-
-npkill # Search subdirectory for deletes selected node_modules directory 
 
 aws-shell # autocomplete aws command line
 
@@ -93,4 +142,31 @@ tree -I 'node_modules|test-coverage|*.js|*.png|*.sh|*.json' # listing of files i
 export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 # Incase utf-8 missing from macOS terminal
 
 redis-server /usr/local/etc/redis.conf # redis
+
+history | grep -v "cd\|ls\|vi\|sudo\|cat\|open\|touch\|cp\|mv\|git\|rm\|npm\|ack\|pwd\|node\|code\|mkdir\|tsc\|switcher\|curl\|sleep\|ssh\|find\|which\|chmod\|assume.sh\|sed\|dig\|aws\|export\|brew\|history\|make\|history\|ps"
+
+zipgrep "Initial WSDL" some.jar
+
+du -a * | sort -r -n | head -20
+
+ngrok http 8000
+
+test -f xxx.txt || echo "File does not exist"
+```
+
+## NPM
+
+```sh
+tsc         # typescript
+n           # Version manager for node
+ng          # Angular
+npkill      # Search subdirectory for deletes selected node_modules directory 
+tldr        # tldr;
+```
+
+## Personal Bash Commands
+
+```sh
+remindme            # Remind if command is completed. TO submitted CMD && remindme
+passwordGenerator   # Password
 ```
