@@ -187,8 +187,6 @@ graphviz
 httpd
 hugo
 ical-buddy
-icu4c
-ilmbase
 imagemagick
 jq
 maven
@@ -196,17 +194,14 @@ mcrypt
 nmap
 node
 openssl
-pv
+pv                  # Unix Pipe Viewer (pv) utility in Node.js
 telnet
 terminal-notifier
 tidy-html5
 tldr
 tree
-unixodbc
 vim
-webp
 wget
-x265
 xz
 yarn
 ```
@@ -214,6 +209,6 @@ yarn
 ## Personal Bash Commands
 
 ```sh
-remindme            # Remind if command is completed. TO submitted CMD && remindme
+remindme            # Remind if command is completed. To be submitted CMD && remindme
 passwordGenerator   # Password
 ```
