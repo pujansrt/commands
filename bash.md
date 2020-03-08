@@ -212,3 +212,17 @@ echo -e "\\033[0;35mCOLOR_PURPLE\\t\\033[1;35mCOLOR_LIGHT_PURPLE"
 echo -e "\\033[0;33mCOLOR_YELLOW\\t\\033[1;33mCOLOR_LIGHT_YELLOW"
 echo -e "\\033[1;30mCOLOR_GRAY\\t\\033[0;37mCOLOR_LIGHT_GRAY"
 ```
+
+## Crontab
+
+```shell script
+# Create crontab file
+
+touch ~/.crontab
+
+# Add content to this file e.g.
+*/10 7-17 * * 1-5 /Users/pujan/Shell/plex_kill.sh
+
+# Crontab apply
+crontab ~/.crontab
+```

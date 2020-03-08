@@ -24,3 +24,15 @@ launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
 ```shell script
 killall -KILL SystemUIServer
 ```
+
+## Create DMG
+
+```shell script
+hdiutil create -ov -scrub -srcfolder ReleaseFolder/ -volname Release-1.2.3 Release.dmg
+```
+
+## Disable OSX's HTTPD
+
+```shell script
+sudo  killall httpd && sudo launchctl unload /System/Library/LaunchDaemons/org.apache.httpd.plist
+```
