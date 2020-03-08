@@ -1,3 +1,13 @@
+# NPM Commands
+
+```bash
+tsc         # typescript
+n           # Version manager for node
+ng          # Angular
+npkill      # Search subdirectory for deletes selected node_modules directory 
+tldr        # tldr;
+```
+
 Create a tarball from a package
 
 ```
