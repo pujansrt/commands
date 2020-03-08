@@ -3,6 +3,8 @@ Productivity Commands List for macOS Software Development
 
 [Brew Commands](brew.md)
 
+[Bash Commands](bash.md)
+
 [Curl Commands](curl.md)
 
 [macOS Commands](mcos.md)
