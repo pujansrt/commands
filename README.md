@@ -5,13 +5,13 @@ Productivity Commands List for macOS Software Development
 
 App is damaged and can't be opened. You should move it to the trash.
 
-```sh
+```bash
 sudo xattr -rd com.apple.quarantine /Applications/Some.app
 ```
 
 Launch Boot Utility OR Reinstall MAC etc
 
-```sh
+```bash
 CMD + R > Press POWER Buttun
 ```
 
@@ -20,7 +20,7 @@ When BOOTing you see cross sign -> press CMD+R+ POWER button > Repair disk will 
 
 ### Enable at command
 
-```sh
+```bash
 launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
 ```
 
@@ -44,17 +44,18 @@ WHERE
 
 @export off;
 ```
-![Exporting Query Results](http://confluence.dbvis.com/display/UG100/Exporting+Query+Results)
+[Exporting Query Results](http://confluence.dbvis.com/display/UG100/Exporting+Query+Results)
 
 
 ## Mis Commands
 
-```sh
+```bash
 tldr split # Too Long dont read
 
 date +'%Y-%m-%d %H:%M:%S.%s'
 
 pgrep -i plex
+
 aws sts assume-role --profile xyz
 
 dig my.net
@@ -67,7 +68,7 @@ history | grep -v "cd\|ls\|vi\|sudo\|cat\|open\|touch\|cp\|mv\|git\|rm\|npm\|ack
 
 ## Convert Commands
 
-```sh
+```bash
 # Horizontal combine pictures
 convert +append a.png b.png out.png
 
@@ -78,7 +79,7 @@ convert -append name-*.jpg op.jpg
 
 ## Curl Commands
 
-```sh
+```bash
 curl --form "file=@/Users/pujan/filename.txt" -F file=@2.jpg  http://host/api/
 
 curl -X GET http://localhost/api
@@ -96,7 +97,7 @@ curl --head --compressed quora.com
 
 ## Jar Commands
 
-```sh
+```bash
 # Diff two jars
 pkgdiff ~/EAFCore.jar workspace_ERP/LibsProj/EAFCore.jar
 
@@ -115,7 +116,7 @@ jar tvf MavenwebappwithTomcat-1.war
 ```
 
 ## Most Used Commands
-```sh
+```bash
 split -l 5000 query.sql file_part_
 
 history | tr -s ' ' | cut -d ' ' -f3 | sort | uniq -c | sort -n | tail | perl -lane 'print $F[1], "\t", $F[0], " ", "▄" x ($F[0] / 12)'
@@ -156,7 +157,7 @@ test -f xxx.txt || echo "File does not exist"
 
 ## NPM
 
-```sh
+```bash
 tsc         # typescript
 n           # Version manager for node
 ng          # Angular
@@ -166,7 +167,7 @@ tldr        # tldr;
 
 ## Brew Favorites
 
-```sh
+```bash
 ack
 apr
 aws-shell
@@ -208,7 +209,24 @@ yarn
 
 ## Personal Bash Commands
 
-```sh
-remindme            # Remind if command is completed. To be submitted CMD && remindme
-passwordGenerator   # Password
+```bash
+remindme                    # Remind if command is completed. To be submitted CMD && remindme
+passwordGenerator           # Password generator 
+mysplit 1000 query.sql      # Split query.sql by lines 1000 and will generator query_1.sql, query_2.sql etc
+```
+
+## Bash
+
+### Colors
+
+```bash
+echo -e "\\033[0mCOLOR_NC (No color)"
+echo -e "\\033[1;37mCOLOR_WHITE\\t\\033[0;30mCOLOR_BLACK"
+echo -e "\\033[0;34mCOLOR_BLUE\\t\\033[1;34mCOLOR_LIGHT_BLUE"
+echo -e "\\033[0;32mCOLOR_GREEN\\t\\033[1;32mCOLOR_LIGHT_GREEN"
+echo -e "\\033[0;36mCOLOR_CYAN\\t\\033[1;36mCOLOR_LIGHT_CYAN"
+echo -e "\\033[0;31mCOLOR_RED\\t\\033[1;31mCOLOR_LIGHT_RED"
+echo -e "\\033[0;35mCOLOR_PURPLE\\t\\033[1;35mCOLOR_LIGHT_PURPLE"
+echo -e "\\033[0;33mCOLOR_YELLOW\\t\\033[1;33mCOLOR_LIGHT_YELLOW"
+echo -e "\\033[1;30mCOLOR_GRAY\\t\\033[0;37mCOLOR_LIGHT_GRAY"
 ```
