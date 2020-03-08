@@ -1,6 +1,10 @@
 # Commands
 Productivity Commands List for macOS Software Development
 
+[Curl Commands](curl.md)
+
+[NPM Commands](npm.md)
+
 ## macOS Specific
 
 App is damaged and can't be opened. You should move it to the trash.
