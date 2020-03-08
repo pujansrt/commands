@@ -1,9 +1,9 @@
 # Commands
-Productivity Commands List for macOS Software Development
-
-[Brew Commands](brew.md)
+Productivity Commands List
 
 [Bash Commands](bash.md)
+
+[Brew Commands](brew.md)
 
 [Curl Commands](curl.md)
 
@@ -12,7 +12,7 @@ Productivity Commands List for macOS Software Development
 [NPM Commands](npm.md)
 
 
-## Db
+## Database Related
 
 Export to Single csv file
 ```sql
@@ -33,7 +33,7 @@ WHERE
 [Exporting Query Results](http://confluence.dbvis.com/display/UG100/Exporting+Query+Results)
 
 
-## Mis Commands
+## Miscellaneous Commands
 
 ```bash
 tldr split # Too Long dont read
@@ -121,29 +121,4 @@ du -a * | sort -r -n | head -20
 ngrok http 8000
 
 test -f xxx.txt || echo "File does not exist"
-```
-
-
-## Personal Bash Commands
-
-```bash
-remindme                    # Remind if command is completed. To be submitted CMD && remindme
-passwordGenerator           # Password generator 
-mysplit 1000 query.sql      # Split query.sql by lines 1000 and will generator query_1.sql, query_2.sql etc
-```
-
-## Bash
-
-### Colors
-
-```bash
-echo -e "\\033[0mCOLOR_NC (No color)"
-echo -e "\\033[1;37mCOLOR_WHITE\\t\\033[0;30mCOLOR_BLACK"
-echo -e "\\033[0;34mCOLOR_BLUE\\t\\033[1;34mCOLOR_LIGHT_BLUE"
-echo -e "\\033[0;32mCOLOR_GREEN\\t\\033[1;32mCOLOR_LIGHT_GREEN"
-echo -e "\\033[0;36mCOLOR_CYAN\\t\\033[1;36mCOLOR_LIGHT_CYAN"
-echo -e "\\033[0;31mCOLOR_RED\\t\\033[1;31mCOLOR_LIGHT_RED"
-echo -e "\\033[0;35mCOLOR_PURPLE\\t\\033[1;35mCOLOR_LIGHT_PURPLE"
-echo -e "\\033[0;33mCOLOR_YELLOW\\t\\033[1;33mCOLOR_LIGHT_YELLOW"
-echo -e "\\033[1;30mCOLOR_GRAY\\t\\033[0;37mCOLOR_LIGHT_GRAY"
 ```
