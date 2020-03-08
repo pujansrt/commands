@@ -181,8 +181,6 @@ docker
 gettext
 git
 git-flow-avh
-gmp
-gnu-getopt
 go
 graphviz
 httpd
