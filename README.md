@@ -1,6 +1,8 @@
 # Commands
 Productivity Commands List for macOS Software Development
 
+[Brew Commands](brew.md)
+
 [Curl Commands](curl.md)
 
 [macOS Commands](mcos.md)
@@ -119,47 +121,6 @@ ngrok http 8000
 test -f xxx.txt || echo "File does not exist"
 ```
 
-
-
-## Brew Favorites
-
-```bash
-ack
-apr
-aws-shell
-awscli
-bash
-bash-completion
-brotli
-composer
-dep
-docker
-gettext
-git
-git-flow-avh
-go
-graphviz
-httpd
-hugo
-ical-buddy
-imagemagick
-jq
-maven
-mcrypt
-nmap
-node
-openssl
-pv                  # Unix Pipe Viewer (pv) utility in Node.js
-telnet
-terminal-notifier
-tidy-html5
-tldr
-tree
-vim
-wget
-xz
-yarn
-```
 
 ## Personal Bash Commands
 
