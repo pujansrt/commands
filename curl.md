@@ -15,3 +15,9 @@ curl -H "Content-Type: application/json" -X PUT -d '{"name":"Pujan S.","gender":
 
 curl --head --compressed quora.com
 ```
+
+## Basic Authentication
+
+```shell script
+curl -H "Authorization: OAuth 2c4419d1aabeec" http://host/api/
+```
