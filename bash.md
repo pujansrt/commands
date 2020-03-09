@@ -163,7 +163,7 @@ select_option() {
     return $selected
 }
 
-## // for example $stage is not selected
+## if $stage is not set
 
 stages=("develop" "staging" "production")
 
@@ -174,20 +174,6 @@ if [ -z "$stage" ] ; then
    choice=$?
    stage=${stages[$choice]}
 fi
-
-
-
-
-# Create the associative array
-declare -A opts
-opts[rerere.enabled]=true
-opts[branch.autosetuprebase]=always
-opts[credential.helper]=osxkeychain
-
-for k in "${!opts[@]}" ## Use the associative array
-do
-    git config --global "$k" "${opts[$k]}"
-done
 ```
 
 ## Personal Bash Commands
