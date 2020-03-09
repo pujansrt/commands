@@ -29,6 +29,8 @@ find . -name "node_modules" -type d -prune | xargs du -chs
 ```shell script
 sed -i -e 's/<first>true<\/first>/<first>false<\/first>/' /Users/psrivastava/scripts/config/settings.xml
 
+cat apache2/httpd.conf | sed '/ *#/d;/^ *$/d' # there are spaces between / , * and /^, *$
+
 # print 5-12 lines of file
 sed -n '5,12p;12q' ~/a.txt
 
@@ -54,12 +56,11 @@ sed -e 's/find/replace/' -e 's/find/replace/' filename
 sed 's#find#replace#' filename
 
 history | awk '{print $2}'
-
 ```
 
 ## Database Related
 
-Export to Single csv file
+### Export to Single csv file
 ```sql
 @set maxrows 10000000;
 @export on;
@@ -77,6 +78,11 @@ WHERE
 ```
 [Exporting Query Results](http://confluence.dbvis.com/display/UG100/Exporting+Query+Results)
 
+### Import SQL
+
+```shell script
+mysql --verbose --host=abc.us-east-1.rds.amazonaws.com --port=3306 --database=dbname --user=admin --password="password" -e "source /Users/pujan/myfile.sql" 
+```
 
 ## Miscellaneous Commands
 
