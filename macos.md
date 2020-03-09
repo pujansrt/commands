@@ -15,7 +15,7 @@ CMD + R > Press POWER Buttun
 When BOOTing you see cross sign -> press CMD+R+ POWER button > Repair disk will solve problem
 
 
-### Enable at command
+## Enable at command
 
 ```bash
 launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist

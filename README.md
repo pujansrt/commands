@@ -12,13 +12,58 @@ Productivity Commands List
 [NPM Commands](npm.md)
 
 
+## Find
+
+
+```shell script
+# Find and Replace
+find . -name "*.java" -print0 | xargs -0 sed -i '' -e 's/packtpub/appkubos/g'
+
+# Find and du
+find . -name "node_modules" -type d -prune | xargs du -chs
+```
+
+
+## sed & awk
+
+```shell script
+sed -i -e 's/<first>true<\/first>/<first>false<\/first>/' /Users/psrivastava/scripts/config/settings.xml
+
+# print 5-12 lines of file
+sed -n '5,12p;12q' ~/a.txt
+
+# Replace the first occurrence of a string in a file, and print the result:
+sed 's/find/replace/' filename
+
+# Replace all occurrences of an extended regular expression in a file:
+sed -E 's/regex/replace/g' filename
+
+# Replace all occurrences of a string in a file, overwriting the file (i.e. in-place):
+sed -i '' 's/find/replace/g' filename
+
+# Replace only on lines matching the line pattern:
+sed '/line_pattern/s/find/replace/' filename
+
+# Print only text between n-th line till the next empty line:
+sed -n 'line_number,/^$/p' filename
+
+# Apply multiple find-replace expressions to a file:
+sed -e 's/find/replace/' -e 's/find/replace/' filename
+
+# Replace separator / by any other character not used in the find or replace patterns, e.g., #:
+sed 's#find#replace#' filename
+
+history | awk '{print $2}'
+
+```
+
 ## Database Related
 
 Export to Single csv file
 ```sql
 @set maxrows 10000000;
 @export on;
-@export set filename="/Users/pujan/workspace_RSC/ps-smartfeed-timezone-service/manual-update/query_result.csv" CsvIncludeColumnHeader=false CsvColumnDelimiter=",";
+@export set filename="/Users/pujan/result.csv" CsvIncludeColumnHeader=false CsvColumnDelimiter=",";
 
 SELECT
     * 
