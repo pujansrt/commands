@@ -1,12 +1,11 @@
 # Bash Commands
 
-When you run another script in bash like below
+This script run in its shell and exported variables inside this script will not propagate to calling script
 
-```bash
+```shell script
 ./myscript arg1 arg2
 ```
 
-This script run in its shell and exported variables inside this script will not propagate to calling script
 In order to solve this problem you can run like this
 
 ```shell script
@@ -19,29 +18,26 @@ source ./myscript arg1 arg2
 But above is valid for Bash shell. sh shell wont allow arg1 and arg2 to pass to script. To solve
 this problem you can do like below
 
-```bash
+```shell script
 set -- set arg1 arg2;. ./myscript arg1 arg2
 ```
 
 ## Existence & Matching
 
-```bash
+```shell script
 if [ ! -f ~/scripts/abc.jar ]; then
-     echo -e "[INFO] File not found!"
- else
-     echo -e "[INFO] File found"
+    echo -e "[INFO] File not found!"
+else
+    echo -e "[INFO] File found"
 fi
-
 
 if [[ $var1 == "secondary" ]]; then
     echo -e "[INFO] Variable matches"
 fi
 
-
 if [ -z "$environment" ]; then
 	echo -e "[INFO] environment variable is NOT set"
 fi
-
 
 if [[ -z $1 ]]; then
     echo "[INFO] 1st argument does not exist"
@@ -50,7 +46,7 @@ fi
 
 ## Check Value is in Array
 
-```
+```shell script
 environments=("develop" "staging" "production")
 
 if ! [[ " ${environments[@]} " =~ " $env " ]]; then echo "env should be one of :${environments[@]}"; help; fi
@@ -72,7 +68,7 @@ done
 
 ## Getting Command Line values
 
-```
+```shell script
 for ARGUMENT in "$@"
 do
     KEY=$(echo $ARGUMENT | cut -f1 -d=)
@@ -90,7 +86,7 @@ done
 
 ## Number of argument
 
-```
+```shell script
 if ! [[ ("$#" -eq 0 || "$#" -eq 4) ]]; then
     help
     exit 1
@@ -100,7 +96,7 @@ fi
 
 ## Read Y/n or y/N
 
-```bash
+```shell script
 read -p "Are you sure ... ? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -163,11 +159,9 @@ select_option() {
     return $selected
 }
 
-## if $stage is not set
-
 stages=("develop" "staging" "production")
 
-if [ -z "$stage" ] ; then
+if [ -z "$stage" ] ; then ## if $stage is not set
    echo -e ""
    echo -e "[INFO] Select STAGE using up/down keys and enter:"
    select_option "${stages[@]}"
@@ -202,13 +196,9 @@ echo -e "\\033[1;30mCOLOR_GRAY\\t\\033[0;37mCOLOR_LIGHT_GRAY"
 ## Crontab
 
 ```shell script
-# Create crontab file
+touch ~/.crontab  # Create crontab file
 
-touch ~/.crontab
+*/10 7-17 * * 1-5 /Users/pujan/some_command.sh # Add content to this file e.g.
 
-# Add content to this file e.g.
-*/10 7-17 * * 1-5 /Users/pujan/Shell/plex_kill.sh
-
-# Crontab apply
-crontab ~/.crontab
+crontab ~/.crontab # Crontab apply
 ```
