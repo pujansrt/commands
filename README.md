@@ -7,6 +7,8 @@ Productivity Commands List
 
 [Curl Commands](curl.md)
 
+[Fetch Commands](fetch.md)
+
 [macOS Commands](mcos.md)
 
 [NPM Commands](npm.md)
